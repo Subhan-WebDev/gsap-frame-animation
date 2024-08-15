@@ -46,11 +46,6 @@
         }
 </style>
 <body>
-    <div id="video-container" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-        <video id="loading-video" class="w-full h-full object-cover" autoplay muted>
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
     </div>
     <div class="w-full bg-zinc-900">
         <div class="parent w-full h-[1400vh] relative ">
@@ -137,14 +132,6 @@
     let images = [];
 
     // Function to hide the video
-    function hideVideo() {
-        const videoContainer = document.getElementById('video-container');
-        videoContainer.style.opacity = 0;
-        setTimeout(() => {
-            videoContainer.style.display = 'none';
-        }, 500); // Fade out duration
-    }
-
     function preloadImages() {
         for (let i = 1; i <= frames.maxIndex; i++) {
             const imageUrl = `./frames/frame_${i.toString().padStart(4, "0")}.jpeg`;
